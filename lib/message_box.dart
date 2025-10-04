@@ -12,7 +12,7 @@ final class MessageBox extends StatelessWidget {
 
   const MessageBox.message({super.key, required this.message, required this.actionLabel, required this.onPressed}) : isLoading = false;
 
-  const MessageBox.loading({super.key, required this.actionLabel, required this.onPressed}) : message = "", isLoading = true;
+  const MessageBox.loading({super.key, this.actionLabel = "", this.onPressed}) : message = "", isLoading = true;
 
   @override
   Widget build(BuildContext context) {
